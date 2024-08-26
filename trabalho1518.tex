@@ -8,7 +8,7 @@
 \usepackage{pgf}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
-\title{Tareda de Casa }
+\title{Tarefa de Casa }
 \author{Angelo Gabriel Soares dos Santos}
 \date{\today}
 \begin{document}
@@ -254,8 +254,8 @@ Colocando dados em orden crescente
 \end{tikzpicture}
 \end{center}
 OBS: no grafico notamos que a linha vertical mostra a frequencia relativa de transdutores fora das especificacoes assim como requisitado no exercicio logo na linha horisontal deduzimos que dos 60 lotes 7 nao apresentaram anomalias 12 apenas uma, 13 2 e assim por diante.
-\\
- 3.Onumero de particulas de contaminação de uma pastilha de silício antes de certo
+\\\\
+ 3.O numero de particulas de contaminação de uma pastilha de silício antes de certo
  processo de limpeza foi determinado para cada pastilha em uma amostra de tamanho
  100, resultando nas frequencias a seguir:
  \begin{center}
@@ -265,4 +265,44 @@ OBS: no grafico notamos que a linha vertical mostra a frequencia relativa de tra
          Frequencia & 1&2&3&12&11&15&18&10&12&4&5&3&1&2&1\\\hline
      \end{tabular}
  \end{center}
+ a)Que proporção das pastilhas da amostra tinha ao menos uma partícula?Ao menos cinco partículas?
+ \\\pgfmathparse{(3/100)*100}\pgfmathresult\% tinhao ao menos uma particula\\  \\\pgfmathparse{((15+11+12+3+2+1)/100)*100}\pgfmathresult\% tinhao ao menos cinco particulas
+
+ b)Que proporção das pastilhas da amostra tinha entre cinco e 10 (inclusive) particulas? Estritamente entre cinco e 10particulas?
+ \\\pgfmathparse{((15+18+10+12+4+5)/100)*100}\pgfmathresult\% tinhao entre 5 e 10(inclusive) particulas\\
+  \\\pgfmathparse{((15+18+10+12+4)/100)*100}\pgfmathresult\% tinhao entre 5 e 10 particulas
+
+\\
+c)Desenhe um histograma usando a frequencia relativa no eixo vertical. Como voce descreveria o formato do histograma?
+
+
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        width=12cm,
+        height=8cm,
+        xlabel={N° de Partículas},
+        ylabel={Frequência (\%)},
+        ymin=0, ymax=20, % Ajustar o limite superior do eixo Y conforme a frequência máxima
+        xtick={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14},
+        ytick={0,5,10,15,20},
+        grid=major,
+        ybar=2*\pgflinewidth,
+        bar width=10pt,
+        ]
+        \addplot[
+            ybar,
+            fill=blue
+        ] 
+        coordinates {
+            (0,1) (1,2) (2,3) (3,12) (4,11) 
+            (5,15) (6,18) (7,10) (8,12) (9,4)
+            (10,5) (11,3) (12,1) (13,2) (14,1)
+        };
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+O histograma apresenta a frequencia de particulas contaminadas em uma pastilha de silicio
 \end{document}
