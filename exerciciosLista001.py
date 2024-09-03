@@ -24,6 +24,10 @@ class Exercicio6():
   def __init__(self):
     self.colete_dados()
     self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
 if __name__ in "__main__":
   print("Exercicio 01")
   print("A area do terreno tem: ",getArea(float(input("Qual a frente do terreno?\n")),float(input("Qual o comprimento do terreno?\n"))))
