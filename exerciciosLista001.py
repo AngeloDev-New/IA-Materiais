@@ -20,7 +20,98 @@ class Exercicio5():
     self.valor_combustivel = float(input("Qual o valor do combustivel?").replace(",","."))
   def retorne(self):
     print(f"Serao colocados {str((self.valor_colocado/self.valor_combustivel).1f)} litros de combustivel")
+    
 class Exercicio6():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+    
+class Exercicio7():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+    
+class Exercicio8():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio9():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio10():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio11():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio12():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio13():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio14():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio15():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio16():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
+  def colete_dados(self):
+    pass
+  def retorne(self):
+    pass
+class Exercicio17():
   def __init__(self):
     self.colete_dados()
     self.retorne()
