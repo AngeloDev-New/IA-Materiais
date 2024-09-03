@@ -20,6 +20,10 @@ class Exercicio5():
     self.valor_combustivel = float(input("Qual o valor do combustivel?").replace(",","."))
   def retorne(self):
     print(f"Serao colocados {str((self.valor_colocado/self.valor_combustivel).1f)} litros de combustivel")
+class Exercicio6():
+  def __init__(self):
+    self.colete_dados()
+    self.retorne()
 if __name__ in "__main__":
   print("Exercicio 01")
   print("A area do terreno tem: ",getArea(float(input("Qual a frente do terreno?\n")),float(input("Qual o comprimento do terreno?\n"))))
@@ -31,7 +35,8 @@ if __name__ in "__main__":
   print("Exercicio 04")
   pessoa = Pessoa()
   print(f"{pessoa.nome} VOCE JA VIVEU {pessoa.dias_vida} DIAS")
-  execicio5 = Exercicio5()
+  Exercicio5()
+  Exercicio6()
   
 
 
