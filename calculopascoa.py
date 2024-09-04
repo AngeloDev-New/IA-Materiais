@@ -70,7 +70,10 @@ Pascoa: 23 de abril de 2000
 
  '''
 #Ano escolhido esta na variavel Y
-Y = int(input("Digite o ano para calcular a data da pascoa(Esse ano deve ser superior a 1582:\n"))
+while True:
+  Y = int(input("Digite o ano para calcular a data da pascoa(Esse ano deve ser superior a 1582:\n"))
+  if Y > 1582:
+    break
 #G contem o numero Aureo 
 G = (Y%19)+1
 #C contem o Seculo
