@@ -242,7 +242,7 @@ tabela_periodica = {
 quantidade_elementos = len(tabela_periodica)
 def QualNome():
   elemento = random.randint(0,quantidade_elementos)
-  alternativaCerta = random.randint(0,4)
+  alternativaCerta = random.randint(0,3)
   elementos = list(tabela_periodica.items())
   alternativa = []
   for i in range(4):
