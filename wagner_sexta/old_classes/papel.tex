@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Projeto: Olho de Horus - Monitoramento Inteligente para Mapeamento de visao computacional}
+\author{
+    Angelo Gabriel Soares dos Santos \and
+    Daniel Vitor Rauber Conti \and
+    Matheus Bachmann \and
+    Uanderson Oliveira \and Julio Cesar
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+A segmentação de imagens é um problema fundamental em visão computacional, com aplicações em diversas áreas como medicina, agricultura e indústria. No contexto deste projeto, o foco está na identificação e mapeamento de placas veiculares, uma tarefa essencial para sistemas de monitoramento de tráfego, controle de acesso e automação de processos relacionados a veículos. O objetivo é investigar o uso de redes neurais profundas, como o Yolo, para segmentação semântica de imagens voltada especificamente para a detecção e localização de placas de veículos. A hipótese é que o uso de arquiteturas modernas e técnicas de data augmentation pode melhorar significativamente a acurácia dos modelos, contribuindo para sistemas mais eficientes e confiáveis de identificação veicular.
+
+\section{Materiais e Métodos}
+
+\subsection{Hardware}
+Os experimentos serão realizados utilizando apenas a plataforma Google Colab para o fine-tuning dos modelos e máquinas locais para testes iniciais. O hardware utilizado inclui:
+\begin{itemize}
+    \item GPU: Placa gráfica NVIDIA disponível no Google Colab para treinamento dos modelos.
+    \item CPU: Processador das máquinas locais para testes e pré-processamento dos dados.
+\end{itemize}
+\subsection{Frameworks e Ferramentas}
+O foco principal será na utilização do framework YOLO (You Only Look Once) para detecção e segmentação de placas veiculares, devido à sua eficiência e precisão em tarefas de visão computacional em tempo real. Além disso, será utilizado o OpenStreetMap para o mapeamento e sincronização das localizações detectadas pelo YOLO, permitindo a integração dos resultados de detecção com dados geográficos abertos. Essa abordagem possibilita o cruzamento das informações extraídas das imagens com mapas digitais, facilitando a visualização e análise espacial dos dados coletados.
+\subsection{Métodos}
+Inicialmente, foi fornecido um dataset veicular\footnote{\url{https://www.inf.ufpr.br/vri/databases/tbFcZE-RodoSol-ALPR.zip}}, o qual será polido e preparado para o fine-tuning. As bounding boxes serão ajustadas conforme o padrão YOLO para a detecção das placas. Em seguida, será utilizada uma rede OCR padrão para a leitura das informações contidas nas placas detectadas. Logo na sequência, será realizado o cruzamento dessas informações extraídas com os mapas digitais, permitindo o rastreamento veicular em tempo real e a visualização espacial dos dados coletados.
+
+\begin{itemize}
+    \item \textbf{Preparação do Dataset:} Coleta, limpeza e organização dos dados, incluindo o ajuste das boxes no padrão YOLO.
+    \item \textbf{Data Augmentation:} Técnicas como rotação, espelhamento e alteração de brilho para aumentar a diversidade dos dados.
+    \item \textbf{Modelo:} Implementação do YOLO para detecção de placas e integração com uma rede OCR para leitura das informações.
+    \item \textbf{Treinamento e Avaliação:} Ajuste de hiperparâmetros, validação cruzada e métricas de desempenho.
+    \item \textbf{Mapeamento e Rastreamento:} Cruzamento das informações detectadas com mapas digitais para rastreamento veicular.
+\end{itemize}
+
+\section{Resultados Esperados}
+Espera-se obter o correto mapeamento veicular, fornecendo uma ferramenta útil nas mãos das autoridades competentes para monitoramento, fiscalização e tomada de decisões baseadas em dados confiáveis extraídos das imagens. O sistema proposto deverá apresentar alta acurácia na detecção e localização de placas, bem como integração eficiente com mapas digitais, contribuindo para maior eficiência e segurança no controle veicular.
+\section{Deploy}
+Além disso, será criado um aplicativo web para visualização e interação com os resultados do sistema, permitindo o acesso remoto e em tempo real às informações de mapeamento veicular. Futuramente, está prevista a portabilidade para plataformas móveis, ampliando o alcance e a praticidade do sistema para diferentes dispositivos e usuários.
+\end{document}
