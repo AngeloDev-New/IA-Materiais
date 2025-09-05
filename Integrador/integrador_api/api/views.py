@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 # utils.py
 from django.http import HttpResponse
@@ -8,19 +9,32 @@ import os
 from django.conf import settings
 from . import CameraClass as c
 import json
+from .models import Cameras
 # Página do mapa
 
 # linkStream = 'https://video04.logicahost.com.br/portovelhomamore/fozpontedaamizadesentidoparaguai.stream/playlist.m3u8'
 # camera = c.Camera(linkStream)
 def map_view(request):
     return render(request, 'api/map.html')
-# @csrf_exempt
+@csrf_exempt
 def camera_view(request):
     if (request.method == 'POST'):
         try:
-            data = json.loads(request.body)
-            ...
-            return HttpResponse(status = 201)
+            dados = json.loads(request.body)
+            camera = Cameras.objects.create(
+                nome=dados.get("nome"),
+                url_stream=dados.get("url_stream"),
+                latitude=dados.get("latitude"),
+                longitude=dados.get("longitude"),
+                direction=dados.get("direction"),
+                alcance=dados.get("alcance")
+            )
+
+            return JsonResponse({
+                "message": "Câmera adicionada com sucesso!",
+                "camera_id": camera.id
+            })
+            return JsonResponse({"message": "Câmera adicionada com sucesso!"})
         except:
             return HttpResponse(status = 400)
     return HttpResponse(status = 405)
