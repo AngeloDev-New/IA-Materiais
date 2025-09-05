@@ -2,15 +2,10 @@ from ultralytics import YOLO
 import cv2
 
 class Camera:
-    def __init__(self, link,direction,distancia,model = "yolo11n.pt"):
+    def __init__(self, confs = {},model = "yolo11n.pt"):
         self.model = YOLO(model)
-        self.link = link
-        self.cap = cv2.VideoCapture(link)
-
-    def __del__(self):
-        self.release()
-        cv2.destroyAllWindows()
-
+        self.link = confs['url_can']
+        self.cap = cv2.VideoCapture(self.link)
 
 
     def get_frame(self,recise = None):
@@ -40,13 +35,24 @@ class Camera:
 
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
+    # def points_in_
 
 
 if __name__ == '__main__':
     linkStream = 'https://video04.logicahost.com.br/portovelhomamore/fozpontedaamizadesentidoparaguai.stream/playlist.m3u8'
     local = {'lat': -25.50949500, 'lng': -54.599215, 'nome': 'ponte_aduana'}
-    direction = 270
-    distancia = 500
-    cam = Camera(linkStream,direction,distancia,modelo = 'yolo11n.pt')
-    cam.testPredict()
+    direction_angle_in_Nort_reference = 270
+    distancia_alcance_metros = 500
+    informations = {
+        'url_can' : linkStream,
+        'local' : local,
+        'foco':{
+            'direction':direction_angle_in_Nort_reference,
+            'alcanse':distancia_alcance_metros
+        }
 
+    }
+    cam = Camera(confs=informations,model = '/home/angelo/Documentos/IA-Materiais/Integrador/networks/v8n_augmentado_plate_vecicle.pt')
+    cam.testPredict()
+    cam.release()
+    cv2.destroyAllWindows()
