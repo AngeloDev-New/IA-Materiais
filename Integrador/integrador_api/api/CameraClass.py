@@ -39,7 +39,7 @@ class Camera:
 
 
 if __name__ == '__main__':
-    linkStream = 'https://video04.logicahost.com.br/portovelhomamore/fozpontedaamizadesentidoparaguai.stream/playlist.m3u8'
+    linkStream = 'https://34.104.32.249.nip.io/SP055-KM055/stream.m3u8'
     local = {'lat': -25.50949500, 'lng': -54.599215, 'nome': 'ponte_aduana'}
     direction_angle_in_Nort_reference = 270
     distancia_alcance_metros = 500

@@ -1,0 +1,42 @@
+<html><head>
+<title>Player</title>
+<style type="text/css">body,html{ background-color: #000000; width:100%;height:100%;margin:0;padding:0}.icone-contador{position:absolute;left:0;top:0;background:rgba(255,0,0, 1.0); min-width: 50px;height: 20px;padding-left: 5px;padding-bottom: 10px; margin: 10px; border-radius: 3px;color: #FFFFFF;font-size: 14px;text-align: center;z-index: 2147483650;}.rmp-time-elapsed{display: none!important;}</style>
+
+<link id="rmp-dress-code" type="text/css" rel="stylesheet preload" as="style" href="https://cdn.radiantmediatechs.com/rmp/7.0.3/css/rmp-s1.min.css"><script async="" src="https://cdn.radiantmediatechs.com/rmp/7.0.3/hls/hls.min.js"></script></head>
+<body>
+<script src="https://cdn.radiantmediatechs.com/rmp/7.0.3/js/rmp.min.js"></script>
+
+  <div id="player_webtv" class="rmp-container rmp-color-button rmp-chrome rmp-container-fade-in rmp-native-captions rmp-live rmp-medium" style="opacity: 1; visibility: visible; width: 1245px; height: 258px;" role="application" tabindex="0"><div class="rmp-content"><video class="rmp-object-fit-contain rmp-video" tabindex="-1" x-webkit-airplay="allow" src="blob:https://playerv.logicahost.com.br/c5f87bf4-fc4b-4dd1-9f50-d4c6677a4b07"></video><div class="rmp-poster rmp-no-display" style="background-color: rgb(0, 0, 0);"><img class="rmp-poster-img rmp-object-fit-contain" alt="Media player poster frame" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII="></div><div class="rmp-cc-area" style="width: 1245px; height: 258px; display: none;"></div></div><button class="rmp-button rmp-overlay-button rmp-color-bg" type="button" aria-label="Reproduzir" style="opacity: 1; visibility: visible;"><span class="rmp-i rmp-i-play"></span></button><div class="rmp-loading-spin rmp-color-bg"><div class="rmp-loading-spin-bounce rmp-bounce-1 rmp-color-bg-button"></div><div class="rmp-loading-spin-bounce rmp-bounce-2 rmp-color-bg-button"></div></div><div class="rmp-control-bar rmp-color-bg"><button class="rmp-play-pause rmp-button rmp-i rmp-i-play" type="button" aria-label="Reproduzir"><div class="rmp-control-bar-hint rmp-color-bg" style="margin-left: -42px; left: 50%;">Reproduzir</div></button><button class="rmp-button rmp-desktop-volume-icon rmp-i rmp-i-volume" type="button" aria-label="Mudo"><div class="rmp-desktop-volume-container rmp-color-bg" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-label="Volume" aria-valuenow="100" aria-valuetext="100%"><div class="rmp-desktop-volume-bar-container"><div class="rmp-desktop-volume-bar" style="height: 100%;"><div class="rmp-desktop-volume-handle rmp-color-bg-button"></div></div></div><div class="rmp-desktop-volume-indicator rmp-color-bg">100%</div><div class="rmp-desktop-volume-hint rmp-color-bg">Volume</div></div></button><div class="rmp-time-elapsed rmp-color-bg"><span class="rmp-time-elapsed-text">AO VIVO</span></div><button class="rmp-fullscreen rmp-button rmp-i rmp-i-resize-full" type="button" aria-label="Tela Cheia"><div class="rmp-control-bar-hint rmp-color-bg" style="margin-left: -41px; right: auto; left: 50%;">Tela Cheia</div></button></div><button class="rmp-button rmp-quality rmp-module rmp-color-bg" style="display: block;" type="button" aria-label="Qualidade"><div class="rmp-module-button"><span class="rmp-i rmp-i-quality"><span class="rmp-quality-hd" style="display: inline;">HD</span></span></div><div class="rmp-hint rmp-color-bg rmp-first-hint">Qualidade</div></button><div class="rmp-module-overlay"><div class="rmp-overlay-wrapper"><div class="rmp-overlay-title"><span class="rmp-overlay-title-text">Qualidade</span></div><div class="rmp-overlay-levels-area"><button class="rmp-button rmp-overlay-level rmp-color-bg rmp-overlay-level-active rmp-q0" type="button" aria-label="Auto">Auto</button><button class="rmp-button rmp-overlay-level rmp-color-bg rmp-q1 rmp-abr-active" type="button" aria-label="1080p"><span>1080p <sup class="rmp-sup">HD</sup></span><span> @ </span><span>1846 kbps</span></button></div></div><button class="rmp-button rmp-inline rmp-i rmp-module-overlay-icons rmp-module-overlay-play-pause rmp-i-play" type="button" aria-label="Reproduzir"><div class="rmp-in-module-hint rmp-color-bg">Reproduzir</div></button><button class="rmp-button rmp-inline rmp-i rmp-i-close rmp-module-overlay-icons rmp-module-overlay-close" type="button" aria-label="Fechar"><div class="rmp-in-module-hint rmp-color-bg">Fechar</div></button></div></div>
+
+<script>
+window.onload = function() {
+  const largura = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  const altura = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+  const src = {
+  hls: "{{m3u8}}"
+};
+const settings = {
+  licenseKey: 'Kl8lY2Vkc3k9YmUwNzJ5ZWkyK28/cm9tNWRhc2lzMzBkYjBBJV8q',
+  src: src,
+  width: largura,
+  height: altura,
+    //autoHeightMode: true,
+    //autoHeightModeRatio: 1.7777777778,
+  contentMetadata: {
+    poster: [
+      ''
+    ]
+  },
+  speed: false,
+  autoplay: true,
+  pathToRmpFiles: 'radiantmediaplayer/'
+};
+const rmp = new RadiantMP('player_webtv');
+rmp.init(settings);
+
+}
+</script>
+    	
+
+</body></html>

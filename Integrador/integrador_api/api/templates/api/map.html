@@ -45,6 +45,28 @@ body {
     transform: scale(1.1);
     box-shadow: 0 6px 25px rgba(0,0,0,0.4);
 }
+.floating-btn-confirm{
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    width: 100px;
+    height: 100px;
+    fill: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    border: none;
+    /* border-radius: 50%; */
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .floating-btn svg {
     width: 24px;
@@ -245,6 +267,9 @@ body {
         left: 15px;
         right: 15px;
     }
+    button.status-panel{
+        margin-left: 200;
+    }
 }
 </style>
 </head>
@@ -297,6 +322,7 @@ body {
                     <input type="number" class="form-input" id="alcance" min="1" required placeholder="500">
                 </div>
             </div>
+            <button type="button" class="btn btn-primary" onclick="adicionarPoint()">Adicionar Manualmente</button>
             
             <div style="text-align: right; margin-top: 25px;">
                 <button type="button" class="btn btn-secondary" onclick="fecharMenu()">Cancelar</button>
@@ -304,7 +330,10 @@ body {
             </div>
         </form>
     </div>
+    
+    
 </div>
+<button type="button" onclick="confirmPoint()" id="confirmButton" class="status-panel">Confirmar</button>
 
 <!-- Status panel -->
 <div class="status-panel">
@@ -361,7 +390,10 @@ document.getElementById('cameraForm').addEventListener('submit', function(e) {
     
     adicionarCamera(formData);
 });
-
+function adicionarPoint(){
+    document.getElementById('menuOverlay').style.display = 'none';
+    document.getElementById('confirmButton').style.display = "block";
+}
 // Função para adicionar nova câmera
 async function adicionarCamera(dados) {
     try {
@@ -389,6 +421,10 @@ async function adicionarCamera(dados) {
 }
 
 // Função para atualizar pontos no mapa
+function confirmPoint(){
+    document.getElementById('menuOverlay').style.display = "block";
+    document.getElementsById('confirmButton').style.display = "none";
+}
 async function atualizarPontos() {
     try {
         const response = await fetch('/points/');
