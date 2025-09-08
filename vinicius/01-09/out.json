@@ -1,10 +1,23 @@
 [
     {
+        "titulo": "Casa - Padrão",
+        "valor": "R$ 300.000,00",
+        "local": "Vila Pioneiro - Toledo/PR",
+        "cod": "12532",
+        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Casa/Padrao/Vila-Pioneiro/12532",
+        "detalhes": {
+            "Dorm.": "2",
+            "Banho": "2",
+            "Garagens": "2",
+            "Terreno": "165m²"
+        }
+    },
+    {
         "titulo": "Apartamento - Padrão",
-        "valor": "R$ 747.495,00",
+        "valor": "R$ 1.150.000,00",
         "local": "Jardim La Salle - Toledo/PR",
-        "cod": "4093",
-        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Padrao/Jardim-La-Salle/4093",
+        "cod": "4301",
+        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Padrao/Jardim-La-Salle/4301",
         "detalhes": {
             "Dorm.": "3",
             "Suite": "1",
@@ -26,111 +39,42 @@
         }
     },
     {
-        "titulo": "Apartamento/Studio Mobiliado (Marcenaria)",
-        "valor": "R$ 530.347,42",
-        "local": "Centro - Toledo/PR",
-        "cod": "11751",
-        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Padrao/Centro/11751",
+        "titulo": "casa terrea a venda no vila industrial com duas garagens",
+        "valor": "R$ 424.000,00",
+        "local": "Vila Industrial - Toledo/PR",
+        "cod": "13082",
+        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Casa/Padrao/Vila-Industrial/13082",
         "detalhes": {
-            "Dorm.": "1",
-            "Banho": "1",
-            "Garagem": "1",
-            "A. Útil": "47m²"
-        }
-    },
-    {
-        "titulo": "Terreno - Lote Urbano",
-        "valor": "R$ 450.000,00",
-        "local": "Jardim Tocantins - Toledo/PR",
-        "cod": "1736",
-        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Terreno/Lote-Urbano/Jardim-Tocantins/1736",
-        "detalhes": {
-            "Terreno": "427m²"
+            "Dorm.": "2",
+            "Banho": "2",
+            "Garagens": "2",
+            "Terreno": "223m²"
         }
     },
     {
         "titulo": "Apartamento - Padrão",
-        "valor": "R$ 512.977,08",
-        "local": "Centro - Toledo/PR",
-        "cod": "12306",
-        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Padrao/Centro/12306",
+        "valor": "R$ 600.000,00",
+        "local": "Jardim La Salle - Toledo/PR",
+        "cod": "315",
+        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Padrao/Jardim-La-Salle/315",
         "detalhes": {
-            "Dorm.": "1",
+            "Dorm.": "3",
             "Suite": "1",
             "Banho": "2",
             "Garagem": "1"
         }
     },
     {
-        "titulo": "Apartamento alto padrão com piscina privativa! Mais uma exclusividade Imobiliária Ativa!",
-        "valor": "R$ 3.020.000,00",
-        "local": "Jardim La Salle - Toledo/PR",
-        "cod": "10528",
-        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Padrao/Jardim-La-Salle/10528",
-        "detalhes": {
-            "Dorm.": "4",
-            "Suítes": "4",
-            "Banho": "7",
-            "Garagens": "2"
-        }
-    },
-    {
-        "titulo": "Oportunidade!",
-        "valor": "R$ 5.800,00",
-        "local": "Vila Pioneiro - Toledo/PR",
-        "cod": "11347",
-        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Sala-Comercial/Vila-Pioneiro/11347",
-        "detalhes": {
-            "Banho": "1",
-            "A. Útil": "400m²"
-        }
-    },
-    {
-        "titulo": "Apartamento Semi Mobiliado no Residencial FLOR DA MATA-Bloco C, 4° pavimento",
-        "valor": "R$ 1.500,00",
-        "local": "Jardim Concórdia - Toledo/PR",
-        "cod": "12286",
-        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Apartamento/Padrao/Jardim-Concordia/12286",
-        "detalhes": {
-            "Dorm.": "2",
-            "Banho": "1",
-            "Garagem": "1",
-            "A. Útil": "54m²"
-        }
-    },
-    {
-        "titulo": "Comercial - Box",
-        "valor": "R$ 1.650,00",
-        "local": "Jardim Independencia - Toledo/PR",
-        "cod": "2009",
-        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Box/Jardim-Independencia/2009",
-        "detalhes": {
-            "Const.": "60m²",
-            "A. Útil": "60m²"
-        }
-    },
-    {
-        "titulo": "Ampla Sala Comercial no Centro com 992mt²",
-        "valor": "R$ 23.000,00",
+        "titulo": "Apartamento - Cobertura",
+        "valor": "R$ 1.300.000,00",
         "local": "Centro - Toledo/PR",
-        "cod": "12183",
-        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Sala-Comercial/Centro/12183",
+        "cod": "4637",
+        "link": "https://www.imobiliariaativa.com.br//comprar/Toledo/Apartamento/Cobertura/Centro/4637",
         "detalhes": {
-            "Banho": "4",
-            "Garagem": "1",
-            "Const.": "992m²",
-            "A. Útil": "992m²"
-        }
-    },
-    {
-        "titulo": "Comercial - Barracão",
-        "valor": "R$ 13.000,00",
-        "local": "Jardim Santa Maria - Toledo/PR",
-        "cod": "10239",
-        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Barracao/Jardim-Santa-Maria/10239",
-        "detalhes": {
-            "Terreno": "490m²",
-            "Const.": "550m²"
+            "Dorm.": "3",
+            "Suite": "1",
+            "Banho": "2",
+            "Garagens": "2"
         }
     },
     {
@@ -144,6 +88,66 @@
             "Suite": "1",
             "Banho": "2",
             "Garagens": "2"
+        }
+    },
+    {
+        "titulo": "Comercial - Sala Comercial em Condomínio",
+        "valor": "R$ 1.800,00",
+        "local": "Vila Industrial - Toledo/PR",
+        "cod": "12285",
+        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Sala-Comercial-em-Condominio/Vila-Industrial/12285",
+        "detalhes": {
+            "Banho": "1",
+            "Terreno": "840m²",
+            "Const.": "118m²",
+            "A. Útil": "59m²"
+        }
+    },
+    {
+        "titulo": "EDIFICIO COMERCIAL",
+        "valor": "R$ 35.000,00",
+        "local": "Centro - Toledo/PR",
+        "cod": "10663",
+        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Edificio-Comercial/Centro/10663",
+        "detalhes": {
+            "Banho": "18",
+            "Garagens": "25",
+            "Terreno": "1.800m²",
+            "Const.": "3.299m²"
+        }
+    },
+    {
+        "titulo": "Comercial - Sala Comercial",
+        "valor": "R$ 2.550,00",
+        "local": "Jardim Coopagro - Toledo/PR",
+        "cod": "12332",
+        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Sala-Comercial/Jardim-Coopagro/12332",
+        "detalhes": {
+            "Banho": "6",
+            "Garagens": "26",
+            "Terreno": "1.791m²",
+            "A. Útil": "50m²"
+        }
+    },
+    {
+        "titulo": "Apartamento - Padrão",
+        "valor": "R$ 1.400,00",
+        "local": "Jardim Santa Maria - Toledo/PR",
+        "cod": "2735",
+        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Apartamento/Padrao/Jardim-Santa-Maria/2735",
+        "detalhes": {
+            "Dorm.": "2",
+            "Banho": "1"
+        }
+    },
+    {
+        "titulo": "Comercial Sala Comercial- JJ Muraro Centro",
+        "valor": "R$ 3.000,00",
+        "local": "Centro - Toledo/PR",
+        "cod": "12058",
+        "link": "https://www.imobiliariaativa.com.br//alugar/Toledo/Comercial/Sala-Comercial/Centro/12058",
+        "detalhes": {
+            "A. Útil": "40m²"
         }
     }
 ]
