@@ -24,71 +24,13 @@
             height: 100vh;
         }
 
-        /* Botão Flutuante para Câmeras */
-        .camera-toggle {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            background: #2563eb;
-            border: none;
-            border-radius: 50%;
-            width: 56px;
-            height: 56px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
-        }
-
-        .camera-toggle:hover {
-            background: #1d4ed8;
-            transform: scale(1.1);
-        }
-
-        .camera-toggle.active {
-            background: #dc2626;
-        }
-
-        /* Sidebar de Câmeras - Agora Modal */
-        .camera-sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 320px;
-            height: 100vh;
+        /* Sidebar Esquerda - Câmeras */
+        .sidebar-left {
+            width: 280px;
             background: #1f2937;
-            padding: 80px 20px 20px;
+            padding: 20px;
             border-right: 1px solid #374151;
             overflow-y: auto;
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            z-index: 999;
-            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .camera-sidebar.open {
-            transform: translateX(0);
-        }
-
-        .sidebar-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 998;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .sidebar-overlay.show {
-            opacity: 1;
-            visibility: visible;
         }
 
         .sidebar-title {
@@ -164,37 +106,24 @@
             font-size: 14px;
         }
 
-        /* Área Principal - Agora Tela Cheia */
+        /* Área Principal */
         .main-area {
             flex: 1;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            position: relative;
         }
 
-        /* Header Flutuante */
         .header {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
             display: flex;
-            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
-        .app-title {
-            position: absolute;
-            top: 20px;
-            left: 90px;
-            right: 200px;
-            z-index: 100;
-            text-align: center;
-        }
-
-        .app-title h1 {
-            font-size: 24px;
+        .header h1 {
+            font-size: 28px;
             font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .controls {
@@ -203,108 +132,86 @@
         }
 
         .btn {
-            padding: 12px 18px;
+            padding: 10px 20px;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 500;
             display: flex;
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
         }
 
         .btn-start {
-            background: rgba(22, 163, 74, 0.9);
+            background: #16a34a;
             color: white;
         }
 
         .btn-start:hover {
-            background: rgba(21, 128, 61, 1);
-            transform: translateY(-2px);
+            background: #15803d;
         }
 
         .btn-stop {
-            background: rgba(220, 38, 38, 0.9);
+            background: #dc2626;
             color: white;
         }
 
         .btn-stop:hover {
-            background: rgba(185, 28, 28, 1);
-            transform: translateY(-2px);
+            background: #b91c1c;
         }
 
         .btn-clear {
-            background: rgba(75, 85, 99, 0.9);
+            background: #4b5563;
             color: white;
         }
 
         .btn-clear:hover {
-            background: rgba(55, 65, 81, 1);
-            transform: translateY(-2px);
+            background: #374151;
         }
 
         .btn:disabled {
-            background: rgba(75, 85, 99, 0.5);
+            background: #4b5563;
             cursor: not-allowed;
             opacity: 0.5;
         }
 
-        /* Vídeo em Tela Cheia */
         .video-container {
-            flex: 1;
             background: black;
-            position: relative;
+            border-radius: 12px;
             overflow: hidden;
+            position: relative;
+            height: 480px;
         }
 
         #video {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             object-fit: cover;
         }
 
         .video-placeholder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            height: 100%;
             color: #9ca3af;
             flex-direction: column;
-            gap: 15px;
-            background: rgba(17, 24, 39, 0.8);
-        }
-
-        .video-placeholder svg {
-            width: 80px;
-            height: 80px;
-            opacity: 0.6;
-        }
-
-        .video-placeholder p {
-            font-size: 18px;
+            gap: 10px;
         }
 
         .processing-indicator {
             position: absolute;
-            top: 100px;
-            right: 20px;
-            background: rgba(245, 158, 11, 0.9);
+            top: 15px;
+            right: 15px;
+            background: #f59e0b;
             color: white;
-            padding: 10px 16px;
-            border-radius: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
             font-size: 14px;
             display: none;
             align-items: center;
-            gap: 10px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            gap: 8px;
         }
 
         .processing-indicator.show {
@@ -312,8 +219,8 @@
         }
 
         .spinner {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border: 2px solid transparent;
             border-top: 2px solid white;
             border-radius: 50%;
@@ -327,11 +234,10 @@
         /* Sidebar Direita - Faces */
         .sidebar-right {
             width: 320px;
-            background: rgba(31, 41, 55, 0.95);
+            background: #1f2937;
             padding: 20px;
             border-left: 1px solid #374151;
             overflow-y: auto;
-            backdrop-filter: blur(10px);
         }
 
         .faces-header {
@@ -357,17 +263,15 @@
         }
 
         .face-item {
-            background: rgba(55, 65, 81, 0.8);
+            background: #374151;
             border-radius: 12px;
             padding: 15px;
             border: 2px solid transparent;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
+            transition: border-color 0.3s ease;
         }
 
         .face-item:hover {
             border-color: #2563eb;
-            background: rgba(55, 65, 81, 1);
         }
 
         .face-content {
@@ -427,71 +331,15 @@
         #canvas {
             display: none;
         }
+        #video {
 
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .sidebar-right {
-                width: 280px;
-            }
-            
-            .camera-sidebar {
-                width: 100%;
-            }
-            
-            .app-title {
-                left: 90px;
-                right: 90px;
-            }
-            
-            .app-title h1 {
-                font-size: 20px;
-            }
-            
-            .controls {
-                flex-direction: column;
-                gap: 8px;
-            }
-        }
-
-        /* Status da Câmera */
-        .camera-status {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(31, 41, 55, 0.9);
-            color: white;
-            padding: 10px 16px;
-            border-radius: 10px;
-            font-size: 14px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .status-indicator {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 8px;
-            background: #16a34a;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Overlay para fechar sidebar -->
-        <div id="sidebar-overlay" class="sidebar-overlay"></div>
-
-        <!-- Botão Flutuante para Câmeras -->
-        <button id="camera-toggle" class="camera-toggle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
-                <circle cx="12" cy="13" r="3"></circle>
-            </svg>
-        </button>
-
-        <!-- Sidebar de Câmeras (Modal) -->
-        <div id="camera-sidebar" class="camera-sidebar">
+        <!-- Sidebar Esquerda - Câmeras -->
+        <div class="sidebar-left">
             <div class="sidebar-title">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
@@ -517,13 +365,9 @@
 
         <!-- Área Principal -->
         <div class="main-area">
-            <!-- Título da App -->
-            <div class="app-title">
-                <h1>Sistema de Reconhecimento Facial</h1>
-            </div>
-
-            <!-- Controles Flutuantes -->
             <div class="header">
+                <h1>Reconhecimento Facial</h1>
+                
                 <div class="controls">
                     <button id="toggle-processing" class="btn btn-start" disabled>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -542,27 +386,20 @@
                 </div>
             </div>
 
-            <!-- Status da Câmera -->
-            <div id="camera-status" class="camera-status" style="display: none;">
-                <span class="status-indicator"></span>
-                <span id="camera-name">Nenhuma câmera selecionada</span>
-            </div>
-
-            <!-- Vídeo em Tela Cheia -->
             <div class="video-container">
                 <video id="video" autoplay muted playsinline style="display: none;"></video>
                 
                 <div id="video-placeholder" class="video-placeholder">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path>
                         <circle cx="12" cy="13" r="3"></circle>
                     </svg>
-                    <p>Clique no botão da câmera para começar</p>
+                    <p>Selecione uma câmera para começar</p>
                 </div>
                 
                 <div id="processing-indicator" class="processing-indicator">
                     <div class="spinner"></div>
-                    Processando frame...
+                    Processando...
                 </div>
             </div>
         </div>
@@ -603,7 +440,6 @@
                 this.processingInterval = null;
                 this.recognizedFaces = [];
                 this.stream = null;
-                this.sidebarOpen = false;
                 
                 // URL do backend - ajuste conforme necessário
                 this.API_BASE = `${window.location.protocol}//${window.location.hostname}:8000`;
@@ -619,17 +455,9 @@
                 this.canvas = document.getElementById('canvas');
                 this.ctx = this.canvas.getContext('2d');
                 
-                // Sidebar de câmeras
-                this.cameraToggle = document.getElementById('camera-toggle');
-                this.cameraSidebar = document.getElementById('camera-sidebar');
-                this.sidebarOverlay = document.getElementById('sidebar-overlay');
                 this.cameraList = document.getElementById('camera-list');
                 this.refreshBtn = document.getElementById('refresh-cameras');
                 this.errorMsg = document.getElementById('error-msg');
-                
-                // Status da câmera
-                this.cameraStatus = document.getElementById('camera-status');
-                this.cameraNameEl = document.getElementById('camera-name');
                 
                 this.videoPlaceholder = document.getElementById('video-placeholder');
                 this.processingIndicator = document.getElementById('processing-indicator');
@@ -642,42 +470,9 @@
             }
 
             bindEvents() {
-                // Sidebar de câmeras
-                this.cameraToggle.addEventListener('click', () => this.toggleCameraSidebar());
-                this.sidebarOverlay.addEventListener('click', () => this.closeCameraSidebar());
-                
                 this.refreshBtn.addEventListener('click', () => this.loadCameras());
                 this.toggleBtn.addEventListener('click', () => this.toggleProcessing());
                 this.clearBtn.addEventListener('click', () => this.clearFaces());
-                
-                // Fechar sidebar com ESC
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && this.sidebarOpen) {
-                        this.closeCameraSidebar();
-                    }
-                });
-            }
-
-            toggleCameraSidebar() {
-                if (this.sidebarOpen) {
-                    this.closeCameraSidebar();
-                } else {
-                    this.openCameraSidebar();
-                }
-            }
-
-            openCameraSidebar() {
-                this.sidebarOpen = true;
-                this.cameraSidebar.classList.add('open');
-                this.sidebarOverlay.classList.add('show');
-                this.cameraToggle.classList.add('active');
-            }
-
-            closeCameraSidebar() {
-                this.sidebarOpen = false;
-                this.cameraSidebar.classList.remove('open');
-                this.sidebarOverlay.classList.remove('show');
-                this.cameraToggle.classList.remove('active');
             }
 
             async loadCameras() {
@@ -702,6 +497,7 @@
                     this.showError('Erro ao carregar câmeras: ' + err.message);
                 }
             }
+
             renderCameras() {
                 this.cameraList.innerHTML = '';
                 
@@ -725,22 +521,12 @@
             async selectCamera(camera) {
                 this.selectedCamera = camera;
                 this.renderCameras();
-                this.updateCameraStatus();
                 
                 if (this.isStreaming) {
                     this.stopCamera();
                 }
                 
                 await this.startCamera();
-            }
-
-            updateCameraStatus() {
-                if (this.selectedCamera) {
-                    this.cameraNameEl.textContent = this.selectedCamera.name;
-                    this.cameraStatus.style.display = 'block';
-                } else {
-                    this.cameraStatus.style.display = 'none';
-                }
             }
 
             async startCamera() {
@@ -750,8 +536,8 @@
                     const constraints = {
                         video: {
                             deviceId: this.selectedCamera.id,
-                            width: { ideal: 1280 },
-                            height: { ideal: 720 }
+                            width: { ideal: 640 },
+                            height: { ideal: 480 }
                         }
                     };
 
@@ -888,13 +674,11 @@
                     const faceEl = document.createElement('div');
                     faceEl.className = 'face-item';
                     
-                    const isNew = face.is_new || (Date.now() - new Date(face.timestamp).getTime() < 10000);
-                    
                     faceEl.innerHTML = `
                         <div class="face-content">
                             <img src="${face.profile_image}" alt="Face ${face.id}" class="face-image">
                             <div class="face-info">
-                                <div class="face-id">Pessoa #${face.id}</div>
+                                <div class="face-id">Face #${face.id.slice(-8)}</div>
                                 <div class="face-details">
                                     <div>Confiança: ${(face.confidence * 100).toFixed(1)}%</div>
                                     <div>Detecções: ${face.detection_count || 1}</div>
@@ -903,7 +687,6 @@
                             </div>
                         </div>
                         ${index === 0 ? '<div class="recent-badge">Mais Recente</div>' : ''}
-                        ${isNew ? '<div class="recent-badge" style="background: #f59e0b;">Nova</div>' : ''}
                     `;
                     
                     this.facesList.appendChild(faceEl);
@@ -961,24 +744,11 @@
             clearFaces() {
                 this.recognizedFaces = [];
                 this.renderFaces();
-                
-                // Opcional: limpar também o backend
-                fetch(`${this.API_BASE}/api/reset-faces`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    }
-                }).catch(err => console.log('Aviso: Não foi possível limpar o backend:', err.message));
             }
 
             showError(message) {
                 this.errorMsg.textContent = message;
                 this.errorMsg.style.display = 'block';
-                
-                // Auto-esconder após 5 segundos
-                setTimeout(() => {
-                    this.hideError();
-                }, 5000);
             }
 
             hideError() {
