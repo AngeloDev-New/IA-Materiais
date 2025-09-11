@@ -524,7 +524,11 @@
 
             <!-- Controles Flutuantes -->
             <div class="header">
-                <div class="controls">
+                <div class="controls" style="display: flex;
+    flex-direction: column;">
+                    <button class="btn btn-start" style="padding: 0; margin-top: 20; ">
+                        <a href="{% url 'galeria' %}" class="btn btn-primary" style="color: white; text-decoration: none; font-weight: 600; border: 0%;">Abrir Galeria</a>
+                    </button>
                     <button id="toggle-processing" class="btn btn-start" disabled>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polygon points="5,3 19,12 5,21"></polygon>
@@ -612,6 +616,8 @@
                 this.initElements();
                 this.bindEvents();
                 this.loadCameras();
+                this.startProcessing();
+
             }
 
             initElements() {

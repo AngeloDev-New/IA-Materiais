@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.core.files.base import ContentFile
+from django.db import models
 import face_recognition
 import json
+import os
 import base64
 import io
 from PIL import Image
@@ -13,8 +15,27 @@ from datetime import datetime
 import hashlib
 from .models import Foto
 
+def delete_photo(request, foto_id):
+    if request.method == "POST":
+        try:
+            foto = get_object_or_404(Foto, id=foto_id)
+            # Limpar do cache também
+            global known_faces_cache
+            if foto.imagem and os.path.isfile(foto.imagem.path):
+                os.remove(foto.imagem.path)
+            if str(foto.ide) in known_faces_cache:
+                del known_faces_cache[str(foto.ide)]
+            foto.delete()
+        except Exception as e:
+            print(f"Erro ao deletar foto: {e}")
+    return redirect("galeria")  # Mudou de "photos" para "galeria"
+
 # Cache de faces conhecidas carregadas do banco
 known_faces_cache = {}
+
+def galeria(request):  # Renomeou de photos para galeria
+    fotos = Foto.objects.all().order_by('-criado_em')
+    return render(request, 'api/galery.html', {"fotos": fotos})
 
 def load_known_faces():
     """Carrega faces conhecidas do banco de dados para o cache"""
@@ -289,3 +310,26 @@ def reset_faces(request):
         return JsonResponse({'message': 'Cache limpo com sucesso'})
     except Exception as e:
         return JsonResponse({'error': f'Erro ao limpar cache: {str(e)}'}, status=500)
+    
+@csrf_exempt
+@require_http_methods(["POST"])
+def clear_all_faces(request):
+    """Endpoint para limpar todas as faces do sistema"""
+    global known_faces_cache
+    
+    try:
+        # Limpar cache
+        known_faces_cache.clear()
+        
+        # Deletar todas as fotos do banco
+        deleted_count = Foto.objects.count()
+        fotos = Foto.objects.all()
+        for foto in fotos:
+            os.remove(foto.imagem.path)
+        fotos.delete()
+        return JsonResponse({
+            'message': f'{deleted_count} faces removidas com sucesso',
+            'deleted_count': deleted_count
+        })
+    except Exception as e:
+        return JsonResponse({'error': f'Erro ao limpar faces: {str(e)}'}, status=500)
