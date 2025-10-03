@@ -1,0 +1,7 @@
+path: /home/angelo/Documentos/IA-Materiais/guilherrme/30_set/data
+
+train: Images/train
+val: Images/val
+
+names:
+  0: pessoa
