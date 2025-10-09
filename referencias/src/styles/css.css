@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+}
+[alt="Logo"]{
+    width: 100pt;
+    position:  absolute ;
+    margin-top: 10pt;
+    align-items: center;
+    /* background-color:  */
+}
+.nav{
+    position: absolute;
+    /* align-items: center; */
+    left: 15vh;
+    top:10px;
+}
+.register{
+    position: absolute;
+    right: 20px;
+
+}
+a{
+    text-decoration: none;
+    font-size: 3ch;
+    padding: 20px;
+    color: #1E4D92;
+
+}
+body{
+    background-color: #F4F7FB;
+}
+a:hover{
+    color: #00B0FF;
+}
+header{
+    top: 0;
+    position: sticky;
+    width: 100%;
+    height: 10ch;
+    background-color: #1A1C1F;
+    
+}
+footer{
+    background-color: #1A1C1F;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    border-top: 5px;
+    
+}
+.content{
+    position: absolute;
+    height: 10000;
+    background-color: #1E4D92;
+
+
+}
+
