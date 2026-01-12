@@ -1,4 +1,4 @@
-# Faculdade de Inteligência Artificial - 3º Semestre
+# Faculdade de Inteligência Artificial - 4º Semestre
 
 📌 [Acessar D2L (Brightspace)](https://bioparkedu.brightspace.com/d2l/login)
 
@@ -7,20 +7,6 @@ Cada pasta corresponde a uma matéria/professor.
 
 ## Estrutura das pastas
 
-- **Segunda-feira**
-  - `vinicius/` → **Web Scraping** (Prof. Vinícius)
-
-- **Terça-feira**
-  - `guilherme/` → **Tratamento de Imagem** (Prof. Guilherme)
-
-- **Quarta-feira**
-  - `rosangela/` → **Otimização Matemática** (Profa. Rosângela)
-- **Quinta-feira** 
-  - `jefferson/` (quinzenal) → **Data Warehouse** (Prof. Jefferson)  
-  - `wagner/` (quinzenal) → **Recuperação de Informação** (Prof. Wagner)  
-
-- **Sexta-feira**
-  - `integrador/` → **Projeto Integrador**
 
 ---
 
